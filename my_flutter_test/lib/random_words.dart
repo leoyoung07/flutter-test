@@ -34,7 +34,12 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: GestureDetector(
+          child: Text('Startup Name Generator'),
+          onTap: () {
+            Navigator.of(context).pushNamed('/simple_table');
+          },
+        ),
       ),
       body: _buildSuggestions(),
     );

@@ -10,10 +10,10 @@ class SimpleTableState extends State<SimpleTable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Simple Table'),
+      appBar: null,
+      body: SafeArea(
+        child: Text('Simple Table here...'),
       ),
-      body: Text('Simple Table here...'),
     );
   }
   

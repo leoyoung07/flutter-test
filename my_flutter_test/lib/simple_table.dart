@@ -17,11 +17,21 @@ class SimpleTableState extends State<SimpleTable> {
                 (rowIndex) => TableRow(children: [
                       TableCell(
                           child: Row(
-                              children: List<Text>.generate(
+                              children: List<Container>.generate(
                                   9,
-                                  (colIndex) => Text(rowIndex.toString() +
-                                      ', ' +
-                                      colIndex.toString()))))
+                                  (colIndex) => Container(
+                                        decoration: BoxDecoration(
+                                            border: Border.all(width: 1)),
+                                        child: Center(
+                                          child: Text('r' +
+                                              rowIndex.toString() +
+                                              'c' +
+                                              colIndex.toString() +
+                                              ', '),
+                                        ),
+                                        width: 50,
+                                        height: 50,
+                                      ))))
                     ]))),
       ),
     );

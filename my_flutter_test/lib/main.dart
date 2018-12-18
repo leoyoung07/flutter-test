@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
 import 'random_words.dart';
 import 'simple_table.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  debugPaintSizeEnabled=true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
